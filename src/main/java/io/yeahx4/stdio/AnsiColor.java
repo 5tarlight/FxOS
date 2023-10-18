@@ -64,4 +64,9 @@ public enum AnsiColor {
     WHITE_BG_BRIGHT("\033[0;107m");
 
     private final String value;
+
+    @Override
+    public String toString() {
+        return this.value;
+    }
 }
