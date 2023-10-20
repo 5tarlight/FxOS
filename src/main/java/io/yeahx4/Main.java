@@ -1,7 +1,10 @@
 package io.yeahx4;
 
-public class Main {
+import io.yeahx4.stdio.AsyncStdoutWriter;
+
+public final class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to FxOS");
+        AsyncStdoutWriter.getInstance().println("Hello World!");
+        AsyncStdoutWriter.getInstance().join();
     }
 }

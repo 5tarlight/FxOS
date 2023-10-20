@@ -1,9 +1,7 @@
 package io.yeahx4.stdio;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
 public enum AnsiColor {
     RESET("\u001B[0m"),
@@ -64,6 +62,10 @@ public enum AnsiColor {
     WHITE_BG_BRIGHT("\033[0;107m");
 
     private final String value;
+
+    AnsiColor(String value) {
+        this.value = value;
+    }
 
     @Override
     public String toString() {
