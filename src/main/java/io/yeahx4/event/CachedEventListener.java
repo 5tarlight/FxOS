@@ -1,7 +1,10 @@
 package io.yeahx4.event;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.EventListener;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -25,5 +28,13 @@ public final class CachedEventListener implements EventListener {
 
             eventMap.get(name).accept(payload);
         });
+    }
+
+    public static @NotNull List<Runnable> shutdownNow() {
+        return executor.shutdownNow();
+    }
+
+    public static void shutdown() {
+        executor.shutdown();
     }
 }

@@ -3,7 +3,7 @@ package io.yeahx4.stdio;
 import java.util.LinkedList;
 import java.util.Queue;
 
-@Deprecated
+@Deprecated(forRemoval = true)
 public final class AsyncStdoutWriter {
     private final Queue<String> buffer;
     private final BufferWatcher watcher;
