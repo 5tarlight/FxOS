@@ -53,4 +53,12 @@ public final class StdoutWriter {
         this.queue.add(obj);
         CachedEventListener.invoke("stdout", null);
     }
+
+    public static void pln(String str) {
+        getInstance().println(str);
+    }
+
+    public static void p(String str) {
+        getInstance().print(str);
+    }
 }
